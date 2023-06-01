@@ -104,4 +104,6 @@ fun main(args: Array<String>) {
 
     //xử lý String, char: như thông thường
 
+    //Array cũng vậy, chủ yếu syntax chứ ko khác mấy java
+    //oop, kế thừa đa hình trừu tượng đóng gói cũng không khác mấy, chỉ syntax xíu
 }
