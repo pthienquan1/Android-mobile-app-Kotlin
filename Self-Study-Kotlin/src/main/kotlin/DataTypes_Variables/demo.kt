@@ -18,7 +18,12 @@ fun main(args: Array<String>) {
     var mangKyTu:CharArray = charArrayOf('a','b','c');
 
     println("Mảng số nguyên: ${mangSoNguyen[0]}");
-    
+
     //Khai báo hằng số
     val COLOR_OF_BACKGROUND = "RED";
+
+    //Ép kiểu:  Int -> Long -> Float -> Double
+    var soBEpKieu:Double = soA.toDouble();
+    println("So B:  $soBEpKieu,  Kieu du lieu: "+(soBEpKieu::class.java.typeName));
+
 }
