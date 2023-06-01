@@ -1,3 +1,5 @@
+import kotlin.random.Random
+
 fun main(args: Array<String>) {
     //Khai bao bien
     var soA:Int = 5;
@@ -73,4 +75,33 @@ fun main(args: Array<String>) {
     if (tong2So != null) {
         println("Giá trị x cần tìm: "+ (tong2So + hieu2So!!)/2);
     };
+
+    //when: như bao ngôn ngữ khác, có điều kiện đâầu vào , syntax hơi khác chút xíu ví dụ:
+//    when(i){
+//        i->println();
+//        else -> println();
+//    }
+
+    //for loop: cũng giống bao ngôn ngữ khác
+    for(i in 1..9 step 2){
+        print(i);
+    }
+    //còn kiểu for nữa thì gioongs forEach trong js, java, na ná java
+
+    //do while: cũng giống như bao ngôn ngữ, chắc chắn chạy 1 vòng lần đầu
+
+    //break: thoát khỏi 1 vòng lặp
+    // continue: bỏ qua 1 giá trị trong 1 vòng lặp
+
+    //xử lý ngoại lệ, lỗi : try catch thông thường, option finally
+    //throw Exception: lỗi này mình dự đoán được trước, mình custom output để người dùng b iết
+    //Datetime: thư viện, cần thì search gg
+
+    //random:
+    var rd = Random;
+    var rdInt = rd.nextInt(10);
+    println("random int: , $rdInt");
+
+    //xử lý String, char: như thông thường
+
 }
