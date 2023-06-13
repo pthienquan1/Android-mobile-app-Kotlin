@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtSoA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Nhập số A: "
+        android:textColor="#2196F3"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/edtTextA"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Please input A"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/txtSoB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Nhập số B: "
+        android:textColor="#2196F3"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/edtTextB"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Please input B"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/edtKQ"
+        android:layout_width="96dp"
+        android:layout_height="93dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:ems="10"
+        android:background="#1EE626"
+        android:layout_marginBottom="20dp"
+        android:text="Kết quả"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/btnCong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Cộng" />
+    </LinearLayout>
+
+</LinearLayout>
