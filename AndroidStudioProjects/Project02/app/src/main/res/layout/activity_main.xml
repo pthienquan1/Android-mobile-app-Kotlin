@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sở thích của thím là: "
+        android:textStyle="bold"
+        android:textColor="#E11010"
+        android:textSize="20dp" />
+
+    <CheckBox
+        android:id="@+id/checkPhim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Xem phim" />
+
+    <CheckBox
+        android:id="@+id/checkBong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Đá bóng" />
+
+    <CheckBox
+        android:id="@+id/checkChoi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Đi chơi" />
+
+    <CheckBox
+        android:id="@+id/checkAn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Ăn cơm" />
+
+    <CheckBox
+        android:id="@+id/checkBun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Bún Bò huế" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="submit" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+
+        android:text="Sở thích của bạn chọn là: " />
+
+    <EditText
+        android:id="@+id/edtSoThich"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+
+        android:hint="Sở thích của bạn sẽ hiện ở đây"
+        android:inputType="text"
+        />
+
+</LinearLayout>

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.project01_basiccalculator'
+    namespace 'com.example.project02'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.project01_basiccalculator"
+        applicationId "com.example.project02"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -30,7 +30,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    
+    //options
+    buildFeatures{
+        viewBinding = true;
+    }
 }
 
 dependencies {
