@@ -3,6 +3,7 @@ package com.example.project02
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.project02.databinding.ActivityMainBinding
 
 @SuppressLint("StaticFieldLeak")
@@ -24,6 +25,27 @@ class MainActivity : AppCompatActivity() {
     private fun addEvents(){
         binding.button2.setOnClickListener {
             XuLyClickVaoSoThich()
+
+        }
+
+        binding.btnXacNhan.setOnClickListener {
+            XuLyXacNhan()
+        }
+    }
+
+    private fun XuLyXacNhan() {
+        var s:String = "";
+        if(binding.radioButton.isChecked){
+            s+= binding.radioButton.text.toString();
+        }
+        else if(binding.radioButton2.isChecked){
+            s+= binding.radioButton2.text.toString();
+        }
+        if(s==""){
+            Toast.makeText(this,"Bạn chưa chọn giới tính",Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(this,"Bạn chọn giới tính là: "+ s, Toast.LENGTH_LONG).show();
         }
     }
 
