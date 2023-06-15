@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Project01_BasicCalculator</string>
+<!--    <string-array name="arrQuocGia1">-->
+<!--        <item>Campuchia</item>-->
+<!--        <item>American</item>-->
+<!--        <item>Sing</item>-->
+<!--        <item>VN</item>-->
+<!--        <item>Frace</item>-->
+<!--        <item>Campuchia</item>-->
+<!--        <item>American</item>-->
+<!--        <item>Sing</item>-->
+<!--        <item>VN</item>-->
+<!--        <item>Frace</item>-->
+<!--        <item>Campuchia</item>-->
+<!--        <item>American</item>-->
+<!--        <item>Sing</item>-->
+<!--        <item>VN</item>-->
+<!--        <item>Frace</item>-->
+
+
+<!--    </string-array>-->
 </resources>

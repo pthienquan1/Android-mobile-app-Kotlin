@@ -7,132 +7,80 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+<!--Bài tạo ảnh-->
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="24dp"-->
+<!--        android:textColor="#20f"-->
+<!--        android:text="Chọn hình để hiển thị" />-->
+
+<!--    <RadioGroup-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" >-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radPic1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:checked="true"-->
+<!--            android:text="RadioButton" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radPic2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="RadioButton" />-->
+<!--    </RadioGroup>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imgPic"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="271dp"-->
+<!--        android:scaleType="fitStart"-->
+
+<!--        app:srcCompat="@drawable/pic1" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imgExit"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="right"-->
+<!--        app:srcCompat="@drawable/exit1" />-->
+
+<!--    Bài list view-->
+
+
+<!--    <ListView-->
+<!--        android:id="@+id/lvQuocGia"-->
+<!--        android:background="#FF0"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        />-->
     <TextView
-        android:id="@+id/txtSoA"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:text="Nhập số A: "
-        android:textColor="#2196F3"
-        android:textSize="24sp" />
+        android:text="Nhap ten quoc gia" />
 
     <EditText
-        android:id="@+id/edtTextA"
+        android:id="@+id/edtInput"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="Please input A"
-        android:inputType="textPersonName" />
+        android:inputType="text"
+        android:hint="Nhap ten quoc gia" />
 
-    <TextView
-        android:id="@+id/txtSoB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:text="Nhập số B: "
-        android:textColor="#2196F3"
-        android:textSize="24sp" />
-
-    <EditText
-        android:id="@+id/edtTextB"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="Please input B"
-        android:inputType="textPersonName"/>
-
-    <EditText
-        android:id="@+id/edtKQ"
-        android:layout_width="96dp"
-        android:layout_height="93dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:ems="10"
-        android:background="#1EE626"
-        android:layout_marginBottom="20dp"
-        android:text="Kết quả"/>
-
-    <LinearLayout
+    <Button
+        android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:text="save" />
 
-        <Button
-            android:id="@+id/btnReset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:text="Reset" />
-
-        <Button
-            android:id="@+id/btnCong"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:text="Cộng" />
-    </LinearLayout>
-
-    <LinearLayout
+    <ListView
+        android:id="@+id/lvQuocGia"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnNhan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:text="Nhân" />
-
-        <Button
-            android:id="@+id/btnChia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:text="Chia" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnGiuLau"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:background="#E41B1B"
-            android:layout_marginTop="20dp"
-            android:text="Nhấn giữ lâu lâu xem có gì không?" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <Button
-            android:id="@+id/btnFinish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:backgroundTint="#D31010"
-            android:layout_marginTop="20dp"
-            android:text="Đăng xuất" />
-    </LinearLayout>
-
+        android:layout_height="match_parent"
+        android:listSelector="@color/design_default_color_secondary_variant" />
 </LinearLayout>
