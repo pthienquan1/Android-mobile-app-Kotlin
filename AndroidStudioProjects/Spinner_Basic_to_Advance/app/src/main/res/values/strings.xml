@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">spinnerdemo</string>
+    <string-array name="ngonngu">
+        <item>Việt Nam</item>
+        <item>Lào</item>
+        <item>Campuchia</item>
+    </string-array>
+</resources>
