@@ -23,11 +23,18 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnGo.setOnClickListener {
             val i = Intent(this,MainActivity2::class.java);
+//            i.putExtra("BienString","Chào mừng bạn đến với Quân Blog")
+//            i.putExtra("BienDouble",12131.41414)
+//            i.putExtra("BienBoolean",true);
+            val bundle = Bundle();
+            bundle.putString("BienString","Hello mn");
+            bundle.putInt("BienInt",28)
+            i.putExtras(bundle)
             startActivity(i)
         }
 
         binding.btnLink.setOnClickListener {
-            val i2 = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/MeoChocoHan/"))
+            val i2 = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/"))
             startActivity(i2);
         }
 

@@ -16,5 +16,20 @@
         android:textStyle="bold"
         android:layout_gravity="center"/>
 
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quay lại" />
+
+    <TextView
+        android:id="@+id/edtGetIntent"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
+
 
 </LinearLayout>
