@@ -10,7 +10,7 @@ import com.example.recycleview.databinding.ActivityMainBinding
 import com.example.recycleview.databinding.LayoutItemBinding
 
 
-class RcvAdapter(private var ds: List<OurData>) : RecyclerView.Adapter<RcvAdapter.PhimViewHolder>() {
+class RcvAdapter(private var ds: List<OurData>, val onMovieClick:RcvInterface) : RecyclerView.Adapter<RcvAdapter.PhimViewHolder>() {
     private lateinit var binding: LayoutItemBinding
 
     inner class PhimViewHolder(val binding: LayoutItemBinding) : RecyclerView.ViewHolder(binding.root)
@@ -26,6 +26,12 @@ class RcvAdapter(private var ds: List<OurData>) : RecyclerView.Adapter<RcvAdapte
             holder.binding.txtDesMovie.text = item.des;
             holder.binding.txtNameMovie.text =item.title;
             holder.binding.imgMovie.setImageResource(item.image)
+
+            //listener
+            holder.itemView.setOnClickListener {
+                onMovieClick.OnClickMovie(position)
+            }
+
         }
 
     }
