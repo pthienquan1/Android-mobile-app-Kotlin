@@ -1,0 +1,12 @@
+package com.example.tablayout_viewpager2
+
+import androidx.fragment.app.Fragment
+
+/**
+ * A simple [Fragment] subclass.
+ * Use the [fragment5.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+class fragment5 : Fragment(R.layout.fragment_fragment5) {
+
+}
