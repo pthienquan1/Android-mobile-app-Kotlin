@@ -1,6 +1,8 @@
 package com.example.crud_sqlite
 
 import android.annotation.SuppressLint
+import android.content.ContentValues
+import android.content.DialogInterface
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
@@ -10,6 +12,7 @@ import android.view.View
 import android.widget.SearchView
 import android.widget.SearchView.OnQueryTextListener
 import android.widget.SimpleCursorAdapter
+import androidx.appcompat.app.AlertDialog
 import com.example.crud_sqlite.databinding.ActivityMainBinding
 
 @SuppressLint("StaticFieldLeak")
@@ -83,6 +86,75 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
+        //insert
+        binding.btnInsert.setOnClickListener {
+            var cv = ContentValues();
+            cv.put("user", binding.edtUsername.text.toString());
+            cv.put("password", binding.edtEmail.text.toString());
+            db.insert("account",null,cv);
+            rs.requery();
+            adapter.notifyDataSetChanged();
+
+            var ad = AlertDialog.Builder(this);
+            ad.setTitle("Thêm tài khoản")
+            ad.setMessage("Thêm tài khoản thành công")
+            ad.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
+                binding.edtUsername.setText("");
+                binding.edtEmail.setText("");
+                binding.edtUsername.requestFocus();
+            })
+            ad.show();
+        }
+
+        //update
+        binding.btnUpdate.setOnClickListener {
+            var cv = ContentValues();
+            cv.put("user", binding.edtUsername.text.toString());
+            cv.put("password", binding.edtEmail.text.toString());
+           db.update("account",cv,"_id=?", arrayOf(rs.getString(0)));
+            rs.requery();
+            adapter.notifyDataSetChanged();
+
+            var ad = AlertDialog.Builder(this);
+            ad.setTitle("Cập nhật tài khoản")
+            ad.setMessage("Cập nhật tài khoản thành công")
+            ad.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
+                binding.edtUsername.setText("");
+                binding.edtEmail.setText("");
+                binding.edtUsername.requestFocus();
+            })
+            ad.show();
+        }
+        // delete
+        binding.btnDelete.setOnClickListener {
+            db.delete("account","_id=?", arrayOf(rs.getString(0)))
+            rs.requery();
+            adapter.notifyDataSetChanged();
+
+            var ad = AlertDialog.Builder(this);
+            ad.setTitle("Xóa tài khoản")
+            ad.setMessage("Xóa tài khoản thành công")
+            ad.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
+                if(rs.moveToFirst()){
+                    binding.edtUsername.setText("");
+                    binding.edtEmail.setText("");
+                    binding.edtUsername.requestFocus();
+                }else{
+                    binding.edtUsername.setText("No data found");
+                    binding.edtEmail.setText("No data found");
+                }
+            })
+            ad.show();
+
+        }
+
+        //clear
+        binding.btnClear.setOnClickListener {
+            binding.edtUsername.setText("")
+            binding.edtEmail.setText("")
+            binding.edtUsername.requestFocus()
+        }
 
     }
 }
