@@ -24,6 +24,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
+        binding.btnFetch.setOnClickListener {
+            val intent = Intent(this,FetchingActivity::class.java);
+            startActivity(intent);
+        }
 
 
     }
