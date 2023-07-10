@@ -9,12 +9,25 @@ import com.example.firebase.EmployeeModel
 import com.example.firebase.R
 
 class EmpAdapter(private val ds:ArrayList<EmployeeModel>):RecyclerView.Adapter<EmpAdapter.viewHolder>() {
+    private lateinit var mListener: onItemClickListener
+    interface onItemClickListener{
+        fun onItemClick(position: Int)
+    }
+    fun setOnItemClickListener(clickListener: onItemClickListener){
+        mListener = clickListener;
+    }
   //viewholeder
-    class viewHolder(itemView:View) :RecyclerView.ViewHolder(itemView)
+    class viewHolder(itemView:View, clickListener: onItemClickListener) :RecyclerView.ViewHolder(itemView){
+        init{
+            itemView.setOnClickListener{
+                clickListener.onItemClick(adapterPosition);
+            }
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.emp_list_item,parent,false);
-        return viewHolder(itemView);
+        return viewHolder(itemView,mListener );
     }
 
     override fun getItemCount(): Int {

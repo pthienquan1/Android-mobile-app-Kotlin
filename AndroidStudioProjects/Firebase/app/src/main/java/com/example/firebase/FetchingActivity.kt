@@ -1,6 +1,7 @@
 package com.example.firebase
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -48,6 +49,17 @@ class FetchingActivity : AppCompatActivity() {
                     }
                     val emAdapter = EmpAdapter(ds);
                     binding.rvEmp.adapter = emAdapter;
+                    //code lang nghe su kien click len item recyleview
+                    emAdapter.setOnItemClickListener(object: EmpAdapter.onItemClickListener{
+                        override fun onItemClick(position: Int) {
+                            val intent = Intent(this@FetchingActivity,EmployeeDetailActivity::class.java)
+                            intent.putExtra("empId",ds[position].empId)
+                            intent.putExtra("empName",ds[position].empName)
+                            intent.putExtra("empAge",ds[position].empAge)
+                            intent.putExtra("empSalary",ds[position].empSalary)
+                            startActivity(intent);
+                        }
+                    })
                     binding.rvEmp.visibility = View.VISIBLE
                     binding.textView2.visibility = View.GONE;
                 }
